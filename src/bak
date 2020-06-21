@@ -1,0 +1,43 @@
+import React from 'react';
+import {Card} from 'react-bootstrap'
+import Grid from '@material-ui/core/Grid';
+
+export default class Home extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+
+        }
+    };
+
+
+    render() {
+        return(
+        <div className="card">
+            <Card style={{ width: '25rem', height: '15rem', background: '#d8d8d8' }}>
+                <Card.Body>
+                    <h2>💵 { this.props.nombre }</h2>
+                    <Card.Text>
+                        <Grid container spacing={0}>
+                            <Grid item xs={12} sm={6} className="compra">
+                                <h3>Compra</h3>
+                            </Grid>
+                            <Grid item xs={12} sm={6} className="venta">
+                                <h3>Venta</h3>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6} className="precioCompra">
+                                <h3>$100</h3>
+                            </Grid>
+                            <Grid item xs={12} sm={6} className="precioVenta">
+                                <h3>$150</h3>
+                            </Grid>
+                        </Grid>
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-muted">Actualizado al 20/06/2020 02:48</Card.Footer>
+            </Card>                    
+        </div>
+        );
+    }
+}
